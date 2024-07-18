@@ -68,7 +68,7 @@
         console.log(`the 2D array ${matrix}`);
     // Task 13: Access and log a specific element from the two-dimensional array.
         console.log(`speific elem from 2D array ${matrix[0][0]}`);    
-git 
+
 // Feature Request:
     // Array Manipulation Script: Write a script that demonstrates the creation of an array, adding and removing elements using push, pop, shift, and unshift methods.
     // Array Transformation Script: Create a script that uses map, filter, and reduce methods to transform and aggregate array data.
