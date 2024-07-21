@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 9</title>  
+    <style>
+        .square{
+            width: 10vw;
+            height: 10vw;
+            object-fit: cover;
+        }
+        .rectangle{
+            width: 20vw;
+            height: 10vw;
+            object-fit: cover;
+        }
+        #mouse{
+            width:40vw;
+            height: 20vw;
+            border: 8px solid black;
+            margin-top: 3vw;
+            display: grid;
+            place-items: center;
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -21,10 +41,21 @@
     <section>
         <h1>Activity 3: Removing Elements</h1>
         <button>Like</button>
-        <button>Dislike</button>
+        <button id="dislikebtn">Dislike</button>
+        <button>share</button>
+    </section>
+    <section>
+        <h1>Activity 4: Modifying Attributes and Classes</h1>
+        <img class="square" src="" alt="">
+    </section>
+    <section>
+        <h1>Activity 5: Event Handling</h1>
+        <p style="width:40vw" id="paraChange">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis nostrum voluptatum optio corporis debitis nobis odit? Hic dolores obcaecati accusantium quasi quae? Odit vitae assumenda repudiandae voluptatibus voluptatum vel.</p>
+        <button id="change">Change</button>
+        <div id="mouse">Hover me</div>
     </section>
 
-
+    
     <script src="./day9.js"></script>
 </body>
 </html>

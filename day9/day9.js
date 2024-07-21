@@ -22,13 +22,32 @@
 
 // Activity 3: Removing Elements
     // Task 5: Select an HTML element and remove it from the DOM.
+    document.querySelector("#dislikebtn").remove();
+
     // Task 6: Remove the last child of a specific HTML element.
+    document.querySelectorAll("button")[1].remove();
+    
 // Activity 4: Modifying Attributes and Classes
     // Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
+    let img = document.querySelector("img");
+    img.src = "https://images.unsplash.com/photo-1676188114945-efdc6d290dbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D";
+
     // Task 8: Add and remove a CSS class to/from an HTML element.
+    img.classList.add("rectangle");
+    img.classList.remove("sqaure");
+
+
 // Activity 5: Event Handling
     // Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+    document.querySelector("#change").addEventListener("click",()=>{
+        document.querySelector("#paraChange").textContent = "The Astrophysical Journal is an open access journal devoted to recent developments, discoveries, and theories in astronomy and astrophysics. Publications in ApJ constitute significant new research that is directly relevant to astrophysical applications, whether based on observational results or on theoretical insights or modeling."
+    })
     // Task 10: Add a mouseover event listener to an element that changes its border color.
+    const mouseElement = document.querySelector("#mouse");
+    mouseElement.addEventListener("mouseover",()=>{
+        mouseElement.style.borderColor = "purple";
+        console.log(mouseElement.style.borderColor)
+    })
 // Feature Request:
     // Text Content Manipulation Script: Write a script that selects an HTML element by its ID and changes its text content.
     // Element Creation Script: Create a script that demonstrates creating a new div element and appending it to the body.
