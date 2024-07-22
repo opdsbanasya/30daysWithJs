@@ -45,10 +45,35 @@
 
 // Activity 4: Form Events
     // Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console.
+    let form = document.querySelector("#form");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        console.log(form.elements["name"].value);
+        console.log(form.elements["idNum"].value);
+    })
+
     // Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph.
+    let select = document.querySelector("#select");
+    select.addEventListener("change",()=>{
+        document.querySelector("#selectText").textContent = select.value;
+    })
 // Activity 5: Event Delegation
     // Task 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation.
+    let list = document.querySelector("#list");
+    list.addEventListener("click",(e)=>{
+        if(e.target.tagName === "LI"){
+            console.log(e.target.textContent);
+        }
+    })
+
     // Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.
+    let parent = document.querySelector("#parent");
+    parent.addEventListener("click",(e)=>{
+        if(e.target.tagName === "LI"){
+            console.log(e.target.textContent);
+        }
+    }
+    )
 // Feature Request:
     // Click Event Script: Write a script that adds a click event listener to a button to change the text content of a paragraph.
     // Mouse Events Script: Create a script that handles mouseover and mouseout events to change the background color of an element.
