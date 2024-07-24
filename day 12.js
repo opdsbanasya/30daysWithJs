@@ -49,9 +49,44 @@ multi()
 
 // Activity 3: Custom Error Objects
 // Task 4: Create a custom error class that extends the built-in Error class. Throw an instance of this custom error in a function and handle it using a try-catch block.
+class ValidationError extends Error{
+    constructor(msg){
+        super(msg);
+        this.name = "Validation Error";
+    }
+}
+const multiply = (a,b)=>{
+    if(typeof a !== 'number' || typeof b !== 'number'){
+        throw new ValidationError("Validation error occured");
+    }
+    return a*b;
+}
+try{
+    let res = multiply(5,'3')
+    console.log(res);
+} catch(err){
+    console.log(err);
+}
 
 // Task 5: Write a function that validates user input (e.g., checking if a string is not empty) and throws a custom error if the validation fails. Handle the custom error using a try-catch block.
-
+class EmptyStringError extends Error{
+    constructor(msg){
+        super(msg);
+        this.name = "Empty String Error";
+    }
+}
+const input = () =>{
+    let inpStr = prompt("Enter a String")
+    if(inpStr.length === 0){
+        throw new EmptyStringError("The Entered String is Empty")
+    }
+    return inpStr;
+}
+try{
+    console.log(`The string is : ${input()}`);
+} catch(err){
+    console.log(err);
+}
 // Activity 4: Error Handling in Promises
 // Task 6: Create a promise that randomly resolves or rejects. Use .catch() to handle the rejection and log an appropriate message to the console.
 const startLive = () => {
